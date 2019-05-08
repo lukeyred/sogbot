@@ -65,9 +65,7 @@ let messaged = message.content.toLowerCase();
 	  const embed = new discord.RichEmbed()
   .setDescription(`${message.author.username} has expressed interest in being a part of SOG.
     `)
-  /*
-   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-   */
+
   .setColor(0x000000)
 	  let guild = client.guilds.get('565551348750352384');
 	  channel = guild.channels.get('565551348750352388');
