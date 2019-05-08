@@ -6,13 +6,7 @@ const fs = require("fs");
 
 bot.commands = new discord.Collection();
 
-const embed = new discord.RichEmbed()
-  .setDescription(`**__ChangeLog__** \n
-    `)
-  /*
-   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-   */
-  .setColor(0x8a62db)
+
 
 
 fs.readdir("./commands/", (err,files)  =>{
@@ -62,33 +56,23 @@ if(message.channel.type === "dm"){
 
 let messaged = message.content.toLowerCase();
 
-  if (messaged.indexOf("hello") !== -1){
-
-    const embed = new discord.RichEmbed()
-      .setTitle("Hello Message")
-      .setFooter(`From the Labour Innovative Team || VERSION ALPHA 0.01`)
-      /*
-       * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-       */
-      .setColor(0x725387)
-      .setDescription(`**Hello there ${message.author.username}**,\n\nAt Labour we're striving for innovation. Our bot has custom coded AI that is learning everyday how to pick up the questions you ask it. \n\n *Do !recommend (recommendation) to recommend a new feature for this AI.*`)
-    message.channel.send({embed});
-
-  }else if (messaged.indexOf("!recommend") !== -1){
-
-    let botmessage = args.join(" ");
-    bot.fetchUser('120246971737833473').then((user) => {
-        user.send(`Recommendation from ${message.author.username}: ${botmessage}`);
-        message.channel.send("Recommendation sent!");
-    });
-  console.log("works");
-
-}else{
-    message.channel.send("I don't understand.");
-
-  }
+  if (messaged === "i'm interested" || messaged === "im interested" ){
+	
+	message.channel.send("By submitting your interest, you agree that you will keep any future contacts with SOG confidential and also agree failure to do so will result in your blacklist and termination, say 'confirm' to confirm.")
 
 // END OF MESSAGE SHIT
+  }else if (messaged === "confirm"){
+	  const embed = new discord.RichEmbed()
+  .setDescription(`${message.author.username} has expressed interest in being a part of SOG.
+    `)
+  /*
+   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+   */
+  .setColor(0x000000)
+	  let guild = client.guilds.get('565551348750352384');
+	  channel = guild.channels.get('565551348750352388');
+	  channel.send({embed});
+  }
 }else{
 
   let prefix = botconfig.prefix;
@@ -102,107 +86,6 @@ let messaged = message.content.toLowerCase();
 let commandfile = bot.commands.get(cmd.slice(prefix.length));
 if(commandfile) commandfile.run(bot,message,args);
 
-
-
-
-
-
-if (cmd === `hello`){
-  return message.channel.send("Hi there!");
-}
-
-else if (cmd === `${prefix}ruby`){
-  return message.channel.send("Ruby you dickHED");
-}
-
-else if (cmd === `${prefix}changelog`){
-  return message.channel.send({embed});
-}
-
-else if (cmd === `${prefix}admin-access`){
-  message.channel.send("Checking you are a bot admin...");
-  console.log(message.author.id);
-  if (message.author.id == 120246971737833473){
-    message.channel.send("Admin privelages enhanced. Setting level.");
-    function func(){
-      message.channel.send("Owner Level set. Disregard error protocol - 1202");
-    }
-    function func2(){
-      message.channel.send("Error protocol - 1204 in affect. Reloop.");
-    }
-
-    setTimeout(func,2000);
-    setTimeout(func2,4000);
-
-
-}else{
-    message.channel.send("You are not a bot admin.");
-  }
-
-}
-else if (cmd === `${prefix}admin-override`){
-  message.channel.send("Checking you are a bot admin...");
-  console.log(message.author.id);
-  if (message.author.id == 120246971737833473){
-    message.channel.send("Server status: **Optimum**");
-    function func(){
-      message.channel.send("Optimized, can I reboot the cores?");
-    }
-    function func2(){
-      message.channel.send("Ok, relaunching memory drive.");
-    }
-
-    function func3(){
-      message.channel.send("Process overriden.");
-    }
-
-    function func4(){
-      message.channel.send("Server analysis complete: **Stable**");
-    }
-
-    setTimeout(func,6000);
-    setTimeout(func2,10000);
-    setTimeout(func3,17000);
-    setTimeout(func4,30000);
-
-
-}else{
-    message.channel.send("You are not a bot admin.");
-  }
-
-}
-
-else if (cmd === `${prefix}protocol-12-override`){
-  message.channel.send("Checking you are a bot admin...");
-  console.log(message.author.id);
-  if (message.author.id == 120246971737833473){
-    message.channel.send("Protocol 12: **DESC_ PREFIX {MAINFRAME : - }");
-    function func(){
-      message.channel.send("Protocol 12: Overriden");
-    }
-    function func2(){
-      message.channel.send("**A.R.C DEFENCE INITIATED**");
-    }
-
-    function func3(){
-      message.channel.send("Protocol 12: Rewritten **DESC_PREFIX {MAINFRAME : !}");
-    }
-
-    function func4(){
-      message.channel.send("**A.R.C SHUTDOWN**");
-    }
-
-    setTimeout(func,6000);
-    setTimeout(func2,10000);
-    setTimeout(func3,13000);
-    setTimeout(func4,16000);
-
-
-}else{
-    message.channel.send("You are not a bot admin.");
-  }
-
-}
 
 
 }
