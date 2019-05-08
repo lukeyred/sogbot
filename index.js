@@ -57,7 +57,7 @@ let messaged = message.content.toLowerCase();
 
 // END OF MESSAGE SHIT
   }else if (cmd === "confirm"){
-	  if !($args[0]) return message.channel.send("You did not enter your roblox ID.");
+	  if (!$args[0]) return message.channel.send("You did not enter your roblox ID.");
 	  message.channel.send("Understood.")
 	  const embed = new discord.RichEmbed()
   .setDescription(`**${message.author.username}** (user id: **${message.author.id}**) has expressed interest in being a part of SOG. Their roblox id is ${args[0]}
