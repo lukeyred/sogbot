@@ -53,6 +53,7 @@ let messaged = message.content.toLowerCase();
   .setColor(0x000000)
 	  let guild = bot.guilds.get('490610139368259614');
 	  channel = guild.channels.get('541047581539565638');
+	  channel.send(@here);
 	  channel.send({embed});
   }
 }else{
