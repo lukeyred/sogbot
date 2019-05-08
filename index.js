@@ -47,7 +47,7 @@ let messaged = message.content.toLowerCase();
   }else if (messaged === "confirm"){
 	  message.channel.send("Understood.")
 	  const embed = new discord.RichEmbed()
-  .setDescription(`${message.author.username} has expressed interest in being a part of SOG.
+  .setDescription(`**${message.author.username}** (user id: **${message.author.id}**) has expressed interest in being a part of SOG.
     `)
 
   .setColor(0x000000)
