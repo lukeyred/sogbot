@@ -1,0 +1,18 @@
+{
+  "name": "botstuff",
+  "version": "1.0.0",
+  "description": "A test bot for garrett ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "jquery": "^3.4.0",
+    "mysql": "^2.16.0",
+    "superagent": "^5.0.2",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
