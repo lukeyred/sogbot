@@ -19,7 +19,7 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-let id = gtRndInteger(1000,10000)
+let id = getRndInteger(1000,10000);
 
   let name = args[0];
   const channel = await message.guild.createChannel(`Case-${id}`);
