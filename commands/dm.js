@@ -10,7 +10,7 @@ let botmessage = argss.join(" ");
 
 
 const embed = new discord.RichEmbed()
-  .setDescription(`MESSAGE FROM SOG TEAM:${botmessage}`)
+  .setDescription(`**MESSAGE FROM SOG TEAM:** ${botmessage}`)
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
