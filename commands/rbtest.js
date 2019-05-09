@@ -25,13 +25,7 @@ let {body} = await superagent
 
 
 }
-const embed = new discord.RichEmbed()
-  .setDescription(`${str}`)
-  /*
-   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-   */
-  .setColor(0x00AE86)
-  message.channel.send({embed});
+  message.channel.send({$str});
 };
 
 
