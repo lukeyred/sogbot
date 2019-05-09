@@ -25,7 +25,7 @@ let {body} = await superagent
 
 
 }
-  message.channel.send({$str});
+  message.channel.send(str);
 };
 
 
