@@ -33,5 +33,5 @@ bot.fetchUser(`${args[0]}`).then((user) => {
 
 
 module.exports.help = {
-  name: "bgcheck"
+  name: "dm"
 }
