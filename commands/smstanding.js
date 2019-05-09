@@ -40,7 +40,7 @@ let dad = bot.guilds.get(message.guild.id).id;
       .setFooter(`By, ${message.author.username}`)
       .setTimestamp()
     message.channel.send({embed});
-          let channel = message.channel;
+    let channel = message.channel;
     let channelname = message.channel.name;
     channel.setName(`${channelname}-⚫`)
   }
