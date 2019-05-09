@@ -46,7 +46,7 @@ let dad = bot.guilds.get(message.guild.id).id;
 }
 
 
-}
+
 
 
 
