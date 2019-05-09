@@ -8,7 +8,7 @@ let tag = message.author.id;
 let argss = args.slice(1);
 let botmessage = argss.join(" ");
 
-message.channel.send("Please note, we can not read your messages.");
+
 const embed = new discord.RichEmbed()
   .setDescription(`MESSAGE FROM SOG TEAM:${botmessage}`)
   /*
@@ -18,7 +18,8 @@ const embed = new discord.RichEmbed()
 
 
 bot.fetchUser(`${args[0]}`).then((user) => {
-        user.send(`${embed}`);
+        user.send({embed});
+        user.send("Please note, we can not read your messages.");
         message.channel.send("DM Sent");
     });
 
