@@ -25,7 +25,14 @@ let {body} = await superagent
 
 
 }
-  message.channel.send(str);
+const embed = new discord.RichEmbed()
+  .setTitle("BACKGROUND CHECK")
+  .setDescription(str)
+  /*
+   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+   */
+  .setColor(0x000000)
+message.channel.send({embed});
 };
 
 
