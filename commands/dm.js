@@ -13,7 +13,7 @@ let botmessage = argss.join(" ");
 
     
 const embed = new discord.RichEmbed()
-  .setTitle("RECRUITMENT")
+  .setTitle("SOG ANNOUNCEMENT")
   .setDescription(`**RECRUITMENT:** \n\nThe Special Forces equivelant for Sweden (SOG) is recruiting. It's easy to show your interest. Just DM me (the bot) with "Im Interested" and follow the instructions. Good luck.`)
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
