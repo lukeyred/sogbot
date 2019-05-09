@@ -15,7 +15,7 @@ let dad = bot.guilds.get(message.guild.id).id;
       message.channel.send({embed});
   } else if (args[0] === "prevelant") {
     const embed = new discord.RichEmbed()
-      .setTitle("Threat level Updated")
+      .setTitle("Threat Level Updated")
       .setDescription(`This case's threat level has been updated to: Prevelant.`)
       .setColor(0xedb53d)
       .setFooter(`By, ${message.author.username}`)
@@ -31,7 +31,7 @@ let dad = bot.guilds.get(message.guild.id).id;
     message.channel.send({embed});
   }else if (args[0] === "critical"){
         const embed = new discord.RichEmbed()
-      .setTitle("Standing Updated")
+      .setTitle("Threat Level Updated")
       .setDescription(`This case's threat level has been updated to: Critical`)
       .setColor(0x000000)
       .setFooter(`By, ${message.author.username}`)
