@@ -4,9 +4,9 @@ const botconfig = require("../botconfig.json");
 
 module.exports.run = async (bot,message,args) =>{
 
-  if(!message.member.roles.find(r => r.name === "Moderator")){
-    if(!message.member.roles.find(r => r.name === "Administrator")){
-      if(!message.member.roles.find(r => r.name === "Owner")){
+  if(!message.member.roles.find(r => r.name === "BRIG CO")){
+    if(!message.member.roles.find(r => r.name === "BRIG XO")){
+      if(!message.member.roles.find(r => r.name === "BRIG STAFF")){
         return message.channel.send("You do not have permission to run this command.");
       }
     }
