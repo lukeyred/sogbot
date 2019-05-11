@@ -16,7 +16,7 @@ let {body} = await superagent
 
   for (i = 0; i < body.length; i++) {
 
-  str += `\n${i+1} - ${body[i].Name}`;
+  str += `\n${i+1} - ${body[i].Name} | RANK: ${body[i].Role}`;
 
 
 
